@@ -1,28 +1,13 @@
-// Set the date we're counting down to
-var countDownDate = new Date("Dec 30, 2017 22:00:00").getTime();
+$(document).ready(function () {
+    var movementStrength = 25;
+    var height = movementStrength / $(window).height();
+    var width = movementStrength / $(window).width();
+    $("#bg_movable").mousemove(function (e) {
+        var pageX = e.pageX - ($(window).width() / 2);
+        var pageY = e.pageY - ($(window).height() / 2);
+        var newvalueX = width * pageX * -1 - 25;
+        var newvalueY = height * pageY * -1 - 50;
+        $('#bg_movable').css("background-position", newvalueX + "px     " + newvalueY + "px");
+    });
+});
 
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="countdown"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "I WILL BE HERE";
-  }
-}, 1000);

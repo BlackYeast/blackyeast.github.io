@@ -1,12 +1,7 @@
 $(function () {
     console.log("Page loaded.");
 
-    $(".img_highres").on('load', function () {
-        var id = $(this).attr("id");
-        var highres = $(this).attr("src").toString();
-        var target = "#div_" + id.substring(4);
-        $(target).css("background-image", "url(" + highres + ")");
-    });
+    BgMouseMove();
 
     // bg img flicking animation
     $("#div_byName").shake();

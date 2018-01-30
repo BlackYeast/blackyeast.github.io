@@ -12,7 +12,7 @@ var shakeY;
 var shakeTime;
 
 function HighResImgsLoad() {
-    $(".img_highres").off().on("load", function () {
+    $(".img_highres").on("load", function () {
         var id = $(this).attr("id");
         var highres = $(this).attr("src").toString();
         var target = "#div_" + id.substring(4);

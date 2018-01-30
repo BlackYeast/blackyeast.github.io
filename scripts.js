@@ -1,14 +1,27 @@
 $(function () {
+    console.log("Page loaded.");
+
+    HighResImgsLoad();
+    
+    // bg img flicking animation
+    $("#div_byName").shake();
+});
+
+var shakeDelay;
+var shakeY;
+var shakeTime;
+
+function HighResImgsLoad() {
     $(".img_highres").off().on("load", function () {
         var id = $(this).attr("id");
         var highres = $(this).attr("src").toString();
         var target = "#div_" + id.substring(4);
         $(target).css("background-image", "url(" + highres + ")");
     });
-});
 
-$(document).ready(function () {
+}
 
+function BgMouseMove() {
     var movementStrength = 25;
     var height = movementStrength / $(window).height();
     var width = movementStrength / $(window).width();
@@ -20,13 +33,7 @@ $(document).ready(function () {
         $('#div_bg_movable').css("background-position", newvalueX + "px     " + newvalueY + "px");
     });
 
-    // bg img flicking animation
-    $("#div_byName").shake();
-});
-
-var shakeDelay;
-var shakeY;
-var shakeTime;
+}
 
 jQuery.fn.shake = function () {
     this.each(function (i) {

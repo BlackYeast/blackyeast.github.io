@@ -1,8 +1,13 @@
 $(function () {
     console.log("Page loaded.");
 
-    HighResImgsLoad();
-    
+    $(".img_highres").on('load', function () {
+        var id = $(this).attr("id");
+        var highres = $(this).attr("src").toString();
+        var target = "#div_" + id.substring(4);
+        $(target).css("background-image", "url(" + highres + ")");
+    });
+
     // bg img flicking animation
     $("#div_byName").shake();
 });
@@ -10,16 +15,6 @@ $(function () {
 var shakeDelay;
 var shakeY;
 var shakeTime;
-
-function HighResImgsLoad() {
-    $(".img_highres").on("load", function () {
-        var id = $(this).attr("id");
-        var highres = $(this).attr("src").toString();
-        var target = "#div_" + id.substring(4);
-        $(target).css("background-image", "url(" + highres + ")");
-    });
-
-}
 
 function BgMouseMove() {
     var movementStrength = 25;
@@ -56,3 +51,4 @@ jQuery.fn.shake = function () {
 particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
     console.log('callback - particles.js config loaded');
 });
+

@@ -12,10 +12,18 @@ $(function () {
         $('#div_bg_movable').css("background-position", newvalueX + "px     " + newvalueY + "px");
     });
 
+    AutoSetLanguage();
 
     // bg img flicking animation
     $("#div_byName").shake();
+
+    //listen to swap language
+    //$("#swapLanguage").click(function () {
+    //    SwapLanguage();
+    //});
 });
+
+
 
 var shakeDelay;
 var shakeY;
@@ -44,3 +52,53 @@ particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
     console.log('callback - particles.js config loaded');
 });
 
+
+function AutoSetLanguage() {
+    //User is from Brasil or portugal
+    if (navigator.language.startsWith("pt")) {
+        SetLanguage("pt")
+    }
+}
+
+function SwapLanguage() {
+    if (document.documentElement.getAttribute('lang') == 'pt') {
+        SetLanguage("en")
+
+    } else {
+        SetLanguage("pt")
+    }
+}
+
+function SetLanguage(language) {
+    if (language == "pt") {
+        $(".en").css("display", "none");
+        $(".pt").css("display", "inline");
+        document.documentElement.setAttribute('lang', 'pt');
+
+
+    } else {
+        $(".en").css("display", "inline");
+        $(".pt").css("display", "none");
+        document.documentElement.setAttribute('lang', 'en');
+ }
+}
+
+function ShowMenu(menuName) {
+    HideAllMenus();
+    $(("#"+menuName).toString()).fadeIn(5);
+}
+
+function HideAllMenus() {
+    $(".menu").each(function (index) {
+        $(this).fadeOut(5);
+    });
+    $("#navbar").fadeOut(10);
+    $("#return").fadeIn(15);
+    
+}
+
+function Return() {
+    HideAllMenus();
+    $("#navbar").fadeIn(15);
+    $("#return").fadeOut(15);
+}

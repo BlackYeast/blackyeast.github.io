@@ -1,6 +1,6 @@
 
 html {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -9,11 +9,11 @@ body {
     padding: 0;
     /*font-family:'Times New Roman', Times, serif;*/
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: rgba(255,255,255, 0.85);
     background-color: black;
     -webkit-font-smoothing: antialiased;
     -ms-overflow-style: none;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -25,13 +25,37 @@ body {
     display: none;
 }
 
+/* Language */
+.en {
+}
 
+.pt {
+    display: none;
+}
+
+#swapLanguage {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+/* Background */
 #div_bg {
     background: url(imgs/BlackYeastBg.png);
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
+    pointer-events: auto;
 }
 
 #div_byName {
@@ -41,7 +65,9 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50%;
+    pointer-events: none;
 }
+
 #div_bg_movable {
     background: url(imgs/BlackYeastFront.png) -25px -50px;
     position: fixed;
@@ -50,7 +76,11 @@ body {
     height: 100vh;
     z-index: 0;
     background-size: calc(100vw + 50px);
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
+}
+
+img {
+    pointer-events: none;
 }
 
 #particles-js {
@@ -59,4 +89,69 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    pointer-events: none;
+}
+
+
+/* Navbar */
+.navbar {
+    float: right;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-align: left;
+}
+
+/* Buttons */
+
+.button {
+}
+
+    .button ul {
+        list-style: none;
+        position: relative;
+        left: -50%;
+    }
+
+    .button li {
+        float: left;
+        position: relative;
+    }
+
+    .button a {
+        color: rgba(255,255,255, 0.40);
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 2px;
+        margin: 10px;
+        padding: 15px 15px;
+        float: left;
+        text-decoration: none;
+        text-align: center;
+        /* border: 1px solid rgba(255, 255, 255, 0.09); */
+        white-space: nowrap;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+    }
+
+        .button a:hover {
+            transition: 0.1s;
+            -webkit-transition: 0.1s; /* Safari */
+            color: black;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+
+/* Menus */
+.menu {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 75vw;
+    height: 65vh;
+    background-color: #000000c4;
+    border-radius: 3px;
+    padding: 40px;
 }

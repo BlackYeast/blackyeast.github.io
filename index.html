@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!--<link rel="shortcut icon" type="image/png" href="favicon.ico" />-->
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -19,12 +19,73 @@
 
 <body>
     <!-- 748912 -->
+    <!-- Background and logo -->
     <div id="div_bg">
         <div id="div_bg_movable">
             <div id="div_byName">
             </div>
         </div>
     </div>
+
+    <!-- Particles -->
     <div id="particles-js"></div>
+
+    <!-- Navbar -->
+    <div id="navbar" class="navbar button">
+        <ul>
+            <li>
+                <a href="javascript:ShowMenu('about');">
+                    <div class="en">About</div>
+                    <div class="pt">Sobre</div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:ShowMenu('donate');">
+                    <div class="en">Donate</div>
+                    <div class="pt">Doar</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Return button -->
+    <div id="return" class="navbar button hide">
+        <ul>
+            <li>
+                <a href="javascript:Return();">
+                    <div class="en">Return</div>
+                    <div class="pt">Voltar</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- MENUS -->
+    <!-- About -->
+    <div id="about" class="menu">
+        <div class="en">Black Yeast is a psychological horror adventure with focus on narrative, which you and your dog must survive day after day where each action influences the history.</div>
+        <div class="pt">Black Yeast é</div>
+    </div>
+
+    <!-- Donate -->
+    <div id="donate" class="menu">
+        <div class="en">Donate to us.</div>
+        <div class="pt">Doa pa nois.</div>
+    </div>
+
+
+
+    <!-- Language selection -->
+    <div id="swapLanguage" class="button">
+        <ul>
+            <li>
+                <a href="javascript:SwapLanguage();">
+                    <div class="en">en-US</div>
+                    <div class="pt">pt-BR</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </body>
 </html>

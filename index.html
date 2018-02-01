@@ -1,91 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--<link rel="shortcut icon" type="image/png" href="favicon.ico" />-->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link rel="shortcut icon" type="image/png" href="favicon.ico" />-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Scripts -->
-    <script src="jquery-3.3.1.min.js"></script>
-    <script src="particles.min.js"></script>
-    <script type="text/javascript" src="scripts.js"></script>
+	<!-- Scripts -->
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="particles.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
 
-    <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <title>Black Yeast</title>
+	<title>Black Yeast</title>
 </head>
 
 <body>
-    <!-- 748912 -->
-    <!-- Background and logo -->
-    <div id="div_bg">
-        <div id="div_bg_movable">
-            <div id="div_byName">
-            </div>
-        </div>
-    </div>
+	<!-- 748912 -->
+	<!-- BACKGROUNDS -->
 
-    <!-- Particles -->
-    <div id="particles-js"></div>
+	<div id="home">
+		<div id="div_bg_movable">
+			<div id="div_byName">
+			</div>
+		</div>
+	</div>
 
-    <!-- Navbar -->
-    <div id="navbar" class="navbar button">
-        <ul>
-            <li>
-                <a href="javascript:ShowMenu('about');">
-                    <div class="en">About</div>
-                    <div class="pt">Sobre</div>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:ShowMenu('donate');">
-                    <div class="en">Donate</div>
-                    <div class="pt">Doar</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Return button -->
-    <div id="return" class="navbar button hide">
-        <ul>
-            <li>
-                <a href="javascript:Return();">
-                    <div class="en">Return</div>
-                    <div class="pt">Voltar</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- MENUS -->
-    <!-- About -->
-    <div id="about" class="menu">
-        <div class="en">Black Yeast is a psychological horror adventure with focus on narrative, which you and your dog must survive day after day where each action influences the history.</div>
-        <div class="pt">Black Yeast é</div>
-    </div>
-
-    <!-- Donate -->
-    <div id="donate" class="menu">
-        <div class="en">Donate to us.</div>
-        <div class="pt">Doa pa nois.</div>
-    </div>
+	<!-- Particles -->
+	<div id="particles-js"></div>
 
 
+	<!-- MENUS -->
+	<!-- About -->
+	<div id="about" class="menu">
+		<div class="menuText">
+			<div class="en">Black Yeast is a horror adventure with focus on narrative, which you and your dog must survive day after day where each action influences the history.</div>
+			<div class="pt">Black Yeast é um jogo de terror com foco na narrativa, em que você e seu cão devem sobreviver dia após dia onde cada ação influencia no desfecho da história.</div>
+		</div>
+	</div>
 
-    <!-- Language selection -->
-    <div id="swapLanguage" class="button">
-        <ul>
-            <li>
-                <a href="javascript:SwapLanguage();">
-                    <div class="en">en-US</div>
-                    <div class="pt">pt-BR</div>
-                </a>
-            </li>
-        </ul>
-    </div>
+	<!-- Donate -->
+	<div id="donate" class="menu">
+		<div class="menuText">
+			<div class="en">
+				<p>
+					<h1>Donate</h1>
+					You can contribute to the development of the game on Patreon, for a month of whatever value you want. To go to Game Patreon’s page and see more details,
+					<a href="https://www.patreon.com/BlackYeastGame">click here</a>.<br />
+				</p>
+			</div>
+			<div class="pt">
+				<p>
+					<h1>Doações</h1>
+					Doa pa nois <a href="https://www.patreon.com/BlackYeastGame">aqui</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- OVERLAYS -->
+	<!-- Navbar -->
+	<div id="navbar" class="navbar button">
+		<ul>
+			<li>
+				<a href="#home">
+					<div class="en">Home</div>
+					<div class="pt">Topo</div>
+				</a>
+			</li>
+			<li>
+				<a href="#about">
+					<div class="en">About</div>
+					<div class="pt">Sobre</div>
+				</a>
+			</li>
+			<li>
+				<a href="#donate">
+					<div class="en">Donate</div>
+					<div class="pt">Doar</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Language selection -->
+	<div id="swapLanguage" class="button">
+		<a href="javascript:SwapLanguage();">
+			<div class="en">en-US</div>
+			<div class="pt">pt-BR</div>
+		</a>
+	</div>
 
 </body>
 </html>

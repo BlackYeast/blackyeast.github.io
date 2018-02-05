@@ -8,11 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
 	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#191919">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#191919">
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="theme-color" content="#ffffff">
 
@@ -44,10 +44,22 @@
 		<div class="menu">
 			<div class="menuText" style="background-color: rgba(0,0,0,0);border: 0px;">
 				<div class="social">
-					<a href="https://www.youtube.com/BlackYeast" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>
-					<a href="https://www.facebook.com/BlackYeastGame" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
-					<a href="https://twitter.com/BlackYeastGame" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
-					<a href="https://www.patreon.com/BlackYeastGame" target="_blank"><i class="fab fa-patreon fa-3x"></i></a>
+					<div class="en">
+						<a href="https://youtube.com/BlackYeast" title="Youtube channel" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>
+						<a href="https://facebook.com/BlackYeastGame" title="Facebook page" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+						<a href="https://twitter.com/BlackYeastGame" title="Twitter" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+						<a href="https://patreon.com/BlackYeastGame" title="Patreon. Support us!" target="_blank"><i class="fab fa-patreon fa-3x"></i></a>
+						<a href="https://blackyeast.tumblr.com" title="Development Blog" target="_blank"><i class="fab fa-tumblr fa-3x"></i></a>
+						<a href="https://www.reddit.com/r/blackyeast" title="Forum" target="_blank"><i class="fab fa-reddit fa-3x"></i></a>
+						<a href="https://pinterest.com/chrisdbhr" title="Photos references" target="_blank"><i class="fab fa-pinterest fa-3x"></i></a>
+					</div>
+					<div class="pt">
+						<a href="https://youtube.com/BlackYeast" title="Canal no Youtube" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>
+						<a href="https://facebook.com/BlackYeastGame" title="Página no Facebook" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+						<a href="https://patreon.com/BlackYeastGame" title="Patreon" target="_blank"><i class="fab fa-patreon fa-3x"></i></a>
+						<a href="https://brblackyeast.tumblr.com" title="Blog de desenvolvimento" target="_blank"><i class="fab fa-tumblr fa-3x"></i></a>
+						<a href="https://pinterest.com/chrisdbhr" title="Photos references" target="_blank"><i class="fab fa-pinterest fa-3x"></i></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -107,17 +119,15 @@
 				<iframe class="blogFrame" src="https://blackyeast.tumblr.com">
 					<p>
 						<h1>Development blog</h1>
-						You can contribute to the development of the game on Patreon, for a month of whatever value you want. <br />
-						To go to Game Patreon’s page and see more details, <a href="https://blackyeast.tumblr.com">click here</a>.
+						<a href="https://blackyeast.tumblr.com">Access the blog.</a>
 					</p>
 				</iframe>
 			</div>
 			<div class="pt">
-				<iframe class="blogFrame" src="https://blackyeast.tumblr.com">
+				<iframe class="blogFrame" src="https://brblackyeast.tumblr.com">
 					<p>
 						<h1>Blog de desenvolvimento</h1>
-						Você pode ajudar no desenvolvimento do jogo doando diretamente para nós no Patreon, pelo valor que você quiser por mês. <br />
-						Clique <a href="https://blackyeast.tumblr.com">aqui</a> para ir página do jogo no Patreon.
+						<a href="https://brblackyeast.tumblr.com">Acesse o blog.</a>
 					</p>
 				</iframe>
 			</div>
@@ -163,11 +173,10 @@
 	</div>
 
 	<!-- Language selection -->
-	<div id="swapLanguage" class="button">
-		<a href="javascript:SwapLanguage();">
-			<div class="en">en-US</div>
-			<div class="pt">pt-BR</div>
-		</a>
+	<div id="swapLanguage">
+		<div id="enLanguage" class="en"><a href="javascript:SwapLanguage();"></a></div>
+		<div id="ptLanguage" class="pt"><a href="javascript:SwapLanguage();"></a></div>
+
 	</div>
 
 </body>

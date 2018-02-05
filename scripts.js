@@ -75,15 +75,11 @@ function SetLanguage(language) {
 		$(".en").css("display", "none");
 		$(".pt").css("display", "inline");
 		document.documentElement.setAttribute('lang', 'pt');
-		$("#swapLanguage").addClass('ptButton');
-		$("#swapLanguage").removeClass('enButton');
 
 	} else {
 		$(".en").css("display", "inline");
 		$(".pt").css("display", "none");
 		document.documentElement.setAttribute('lang', 'en');
-		$("#swapLanguage").addClass('enButton');
-		$("#swapLanguage").removeClass('brButton');
 	}
 }
 

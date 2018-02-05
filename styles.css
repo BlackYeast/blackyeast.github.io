@@ -2,7 +2,7 @@
 html {
     width: 100%;
     height: 100vh;
-    background: url(imgs/BlackYeastBg.png) no-repeat center center fixed;
+    background: url(imgs/BlackYeastBg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -53,26 +53,32 @@ body {
     top: 0;
 }
 
-
-.ptButton {
-}
-
-    .ptButton a:hover {
-        border-top-color: yellow;
-        border-bottom-color: green;
-        border-top-width: 2px;
-        border-bottom-width: 2px;
+    #swapLanguage a {
+        background-size: 100%;
+        background-repeat: round;
+        width: 8vh;
+        height: 8vh;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 
-.enButton {
+#enLanguage a {
+    background-image: url(imgs/enus.png);
 }
 
-    .enButton a:hover {
-        border-top-color: red;
-        border-bottom-color: blue;
-        border-top-width: 2px;
-        border-bottom-width: 2px;
+    #enLanguage a:hover {
+        background-image: url(imgs/enusHover.png);
     }
+
+#ptLanguage a {
+    background-image: url(imgs/ptbr.png);
+}
+
+    #ptLanguage a:hover {
+        background-image: url(imgs/ptbrHover.png);
+    }
+
 
 .hide {
     display: none;
@@ -139,6 +145,7 @@ img {
 nav select {
     display: none;
 }
+
 @media (max-width: 960px) {
     nav ul {
         /*display: none;*/
@@ -155,7 +162,7 @@ nav select {
     .button ul {
         list-style: none;
         position: relative;
-        margin:0;
+        margin: 0;
     }
 
     .button li {
@@ -241,6 +248,7 @@ nav select {
     text-decoration: none;
     color: gray;
     border: none;
+    padding-left: 15px;
 }
 
     .social a:hover {
